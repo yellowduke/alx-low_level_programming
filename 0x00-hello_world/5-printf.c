@@ -2,7 +2,7 @@
 
 /**
  * main - main block
- * Return 0
+ * Retuin: Always 0 (Success)
  */
 
 int main(void)
