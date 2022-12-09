@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 /**
- * main - main block
- * Return: 0
+ * main - Entry point
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -20,7 +20,7 @@ int main(void)
 	}
 	else if (n == 0)
 	{
-		printf("%i is zero\n" , n);
+		printf("%i is zero\n", n);
 	}
 	else if (n < 0)
 	{
