@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 
 /**
  *main - print 0-9 separated with commas, using putchar
