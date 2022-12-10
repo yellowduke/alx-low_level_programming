@@ -2,11 +2,13 @@
 
 /***
  *main - print all combination of three different digits
+ *Description: 'A program that prints all possible different combinations of three digits.'
  *Return: Always 0 (Success)
  */
 
 int main(void)
 {
+	/* your code goes there */
 	int one;
 	int ten;
 	int hundred;
