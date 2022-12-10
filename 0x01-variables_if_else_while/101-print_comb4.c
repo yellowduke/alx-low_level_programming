@@ -8,7 +8,6 @@
 
 int main(void)
 {
-	/* your code goes there */
 	int one;
 	int ten;
 	int hundred;
