@@ -7,6 +7,7 @@
  * @n: input of max bytes to be used
  * Return: Always 0 (success)
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
 	int i, co;
@@ -21,6 +22,6 @@ char *_strncat(char *dest, char *src, int n)
 		if (src[co] == '\0')
 			co = n;
 	}
-	
+
 	return (dest);
 }
