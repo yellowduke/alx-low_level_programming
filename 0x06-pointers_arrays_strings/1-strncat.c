@@ -5,21 +5,20 @@
  * @src: The source of strings
  * @dest: The destination of the string
  * @n: The length of int
- * Return:vpointer to the resulting string dest
+ * Return: pointer to the resulting string dest
  */
 
 char *_strncat(char *dest, char *src, int n);
 {
-	int i, j;
+	int index = strlen(dest);
+	int a = 0;
 
-	for (i = 0; dest[i] != '\0'; i++)
+	while (a < n && *src)
 	{
-		continue;
+		dest[index + a] = *src;
+		src++;
+		a++;
 	}
-	for (j = 0; src[j] != '\0' && j < n; j++)
-	{
-		dest[i + j] = src[j];
-	}
-	dest[i + j] = '\0';
+	dest[index + a] = '\0';
 	return (dest);
 }
