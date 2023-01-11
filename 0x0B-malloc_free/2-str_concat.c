@@ -1,3 +1,6 @@
+#include "main.h"
+#include <stdlib.h>
+
 /**
  * str_concat - Concatenates two strings.
  * @s1: The string to be concatenated upon.
