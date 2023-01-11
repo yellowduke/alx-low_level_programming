@@ -3,11 +3,10 @@
 
 /**
  * str_concat - Concatenates two strings.
- * @s1: The string to be concatenated upon.
- * @s2: The string to be concatenated to s1.
+ * @s1: string 1
+ * @s2: string 2
  *
- * Return: If concatenation fails - NULL.
- * 	Otherwise - a pointer the newly-allocated space in memory containing the concatenated strings.
+ * Return: pointer to concatenated strings
  */
 
 char *str_concat(char *s1, char *s2)
@@ -19,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 
 	if (s2 == NULL)
-		s2 ="";
+		s2 = "";
 
 	for (index = 0; s1[index] || s2[index]; index++)
 		len++;
