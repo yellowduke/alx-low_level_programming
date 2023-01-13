@@ -1,1 +1,1 @@
-memory allocation in C programming
+memory allocation in C programming lang
