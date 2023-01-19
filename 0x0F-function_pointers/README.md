@@ -1,1 +1,1 @@
-Pointers functions on C programming Lang
+Pointers functions on C programming Language
