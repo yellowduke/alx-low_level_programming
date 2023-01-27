@@ -1,49 +1,50 @@
 #include <stdio.h>
 
 /**
- * main - print first 98 Fibonacci numbers starting with 1 and 2.
+ * main - Prints the first 98 Fibonacci numbers
+ *
  * Return: Always 0.
  */
-
 int main(void)
 {
-	int count, overflow;
-	unsigned long a = 1;
-	unsigned long b = 1;
-	unsigned long sum = 0;
-	long a_head, a_tail, b_head, b_tail, sum_head, sum_tail;
+	int c, boolean, boolean2;
+	long int n1, n2, fn, fn2, n11, n22;
 
-	printf("1");
-
-	for (count = 2; count < 93; count++)
+	n1 = 1;
+	n2 = 2;
+	boolean =  boolean2 = 1;
+	printf("%ld, %ld", n1, n2);
+	for (c = 0; c < 96; c++)
 	{
-		sum = a + b;
-		a = b;
-		b = sum;
-		printf(", %lu", sum);
+		if (boolean)
+		{
+			fn = n1 + n2;
+			printf(", %ld", fn);
+			n1 = n2;
+			n2 = fn;
+		}
+		else
+		{
+			if (boolean2)
+			{
+				n11 = n1 % 1000000000;
+				n22 = n2 % 1000000000;
+				n1 = n1 / 1000000000;
+				n2 = n2 / 1000000000;
+				boolean2 = 0;
+			}
+			fn2 = (n11 + n22);
+			fn = n1 + n2 + (fn2 / 1000000000);
+			printf(", %ld", fn);
+			printf("%ld", fn2 % 1000000000);
+			n1 = n2;
+			n11 = n22;
+			n2 = fn;
+			n22 = (fn2 % 1000000000);
+		}
+		if (((n1 + n2) < 0) && boolean == 1)
+			boolean = 0;
 	}
-	
-	a_head = a / 10000000000;
-	a_tail = a % 10000000000;
-	b_head = b / 10000000000;
-	b_tail = b % 10000000000;
-
-	for (; count < 99; count++)
-	{
-		overflow = (a_tail + b_tail) / 1000000000;
-		sum_tail = (a_tail + b_tail) - (1000000000 * overflow);
-		sum_head = (a_head + b_head) + overflow;
-
-		printf(", %lu%lu", sum_head, sum_tail);
-
-		a_head = b_head;
-		a_tail = b_tail;
-		b_head = sum_head;
-		b_tail = sum_tail;
-	}
-
-
 	printf("\n");
-
 	return (0);
 }
