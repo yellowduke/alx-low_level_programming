@@ -8,16 +8,13 @@
 
 void print_chessboard(char (*a)[8])
 {
-	unsigned int i, m = 0;
+	int indx1, indx2;
 
-	for (i = 0; i < 64; i++)
+	for (indx1 = 0; a[indx1][7]; indx1++)
 	{
-		if (i % 8 == 0 && i != 0)
-		{
-			m = i;
-			_putchar('\n');
-		}
-		_putchar(a[i / 8][i - m]);
+		for (indx2 = 0; indx2 < 8; indx2++)
+			_putchar(a[indx1][indx2]);
+
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
